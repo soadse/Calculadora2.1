@@ -1,5 +1,10 @@
 let resultado = document.getElementById('resultado')
 let btn = document.getElementsByTagName('button')
+let container = document.getElementById('container')
+let laranja = document.querySelector('.laranja')
+let verde = document.querySelector('.verde')
+let azul = document.querySelector('.azul')
+
 function calcular(tipo, valor){
     if(tipo === 'acao'){
         if(valor === 'c'){
@@ -27,7 +32,7 @@ function calcular(tipo, valor){
                 }, 800)
             }
             let valor = resultado.innerHTML
-            let resultadoLimitado = valor.slice(0, 5);
+            let resultadoLimitado = valor.slice(0, 10);
             resultado.innerHTML = resultadoLimitado
         }
         
@@ -35,7 +40,7 @@ function calcular(tipo, valor){
         resultado.innerHTML += valor
     }
 
-    if(resultado.innerHTML.length > 12){
+    if(resultado.innerHTML.length > 8){
         for(i=0; i < btn.length; i++){
             btn[i].disabled = true
             btn[0].disabled = false
@@ -43,3 +48,28 @@ function calcular(tipo, valor){
     }
     
 }
+
+laranja.addEventListener('click', ()=> {
+    container.style.background = '#F7AC03'
+    resultado.style.border = '10px inset #FC8E0A'
+    for(i=0; i < btn.length; i++){
+        btn[i].style.background = '#FC8E0A'
+    }
+})
+verde.addEventListener('click', ()=> {
+    container.style.background = '#9EDA2F'
+    resultado.style.border = '10px inset #4FC002'
+    for(i=0; i < btn.length; i++){
+        btn[i].style.background = '#4FC002'
+    }
+})
+azul.addEventListener('click', ()=> {
+    container.style.background = '#42B1DE'
+    resultado.style.border = '10px inset #0373C3'
+    for(i=0; i < btn.length; i++){
+        btn[i].style.background = '#0373C3'
+    }
+})
+
+
+
