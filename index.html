@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>JavaScript</title>
+</head>
+<body>
+    <div id="container">
+        <p id="resultado"></p>
+        <div>
+            <button id="limpar" onclick="calcular('acao', 'c')" class="horizontal">C</button>
+            <button id="dividir" onclick="calcular('acao', '/')">/</button>
+            <button id="multiplicar" onclick="calcular('acao', '*')">X</button>
+        </div>
+        <div>
+            <button id="sete" onclick="calcular('valor', 7)">7</button>
+            <button id="oito" onclick="calcular('valor', 8)">8</button>
+            <button id="nove" onclick="calcular('valor', 9)">9</button>
+            <button id="subtrair" onclick="calcular('acao', '-')">-</button>
+        </div>
+        <div>
+            <button id="quatro" onclick="calcular('valor', 4)">4</button>
+            <button id="cinco" onclick="calcular('valor', 5)">5</button>
+            <button id="seis" onclick="calcular('valor', 6)">6</button>
+            <button id="somar" onclick="calcular('acao', '+')">+</button>
+        </div>
+        <div>
+            <button id="um" onclick="calcular('valor', 1)">1</button>
+            <button id="dois" onclick="calcular('valor', 2)">2</button>
+            <button id="tres" onclick="calcular('valor', 3)">3</button>
+            <button id="igual" onclick="calcular('acao', '=')" class="vertical">=</button>
+        </div>
+        <div class="menor">
+            <button id="zero" onclick="calcular('valor', 0)" class="horizontal">0</button>
+            <button id="ponto" onclick="calcular('acao', '.')">.</button>
+        </div>
+    </div>
+</body>
+</html>
