@@ -26,16 +26,20 @@ function calcular(tipo, valor){
                     resultado.innerHTML = '';
                 }, 800)
             }
+            let valor = resultado.innerHTML
+            let resultadoLimitado = valor.slice(0, 5);
+            resultado.innerHTML = resultadoLimitado
         }
         
     } else if(tipo === 'valor'){ 
         resultado.innerHTML += valor
     }
 
-    if(resultado.innerHTML.length > 13){
+    if(resultado.innerHTML.length > 12){
         for(i=0; i < btn.length; i++){
             btn[i].disabled = true
             btn[0].disabled = false
         }
     }
+    
 }
