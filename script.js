@@ -32,19 +32,12 @@ function calcular(tipo, valor){
                 }, 800)
             }
             let valor = resultado.innerHTML
-            let resultadoLimitado = valor.slice(0, 10);
+            let resultadoLimitado = valor.slice(0, 9);
             resultado.innerHTML = resultadoLimitado
         }
         
     } else if(tipo === 'valor'){ 
         resultado.innerHTML += valor
-    }
-
-    if(resultado.innerHTML.length > 8){
-        for(i=0; i < btn.length; i++){
-            btn[i].disabled = true
-            btn[0].disabled = false
-        }
     }
     
 }
